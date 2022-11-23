@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Registrar Perfil</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+<body class="card text-bg-info mb-3" >
+<main>
+    <form method="POST" th:object="${formProfileRegister}" th:action="@{/CreateProfileBD}">
+        <div class="position-relative text-center">
+            <div class="position-absolute top-50 start-50 translate-middle-x" >
+          <span class="border border-5">
+              <img src="../task.jpg" class="img-thumbnail" height="150" width="150">
+          </span>
+                <div class="text-md">
+                    <h3> INGRESA TUS DATOS DEL NUEVO PERFIL</h3>
+                </div>
+
+                <div class="col -12">
+                    <b><label for="idProfile" class="form-label">Id</label></b>
+                    <input type="text" class="form-control" th:field="*{idProfile}" id="idProfile" placeholder="Enter  idProfile" required>
+                </div>
+
+                <div class="col -12">
+                    <b><label for="nameProfile" class="form-label">Nombre</label></b>
+                    <input type="text" class="form-control" th:field="*{nameProfile}" id="nameProfile" placeholder="Enter name of Profile" required>
+                </div>
+
+                <div class="col -12">
+                    <b><label for="phoneProfile" class="form-label">Telefono</label></b>
+                    <input type="text" class="form-control" th:field="*{phoneProfile}" id="phoneProfile" placeholder="Enter phone Profile" required>
+                </div>
+
+
+                <form action="/action_page.php">
+                    <b><label for="createdAtProfile" class="form-label">Fecha creacion</label></b><br>
+                    <input type="date"  th:field="*{createdAtProfile}" id="createdAtProfile" required>
+                </form>
+
+
+                <div class="col-lg-6 mx-auto mb-5 w-50 p-3">
+                    <button class="btn btn-primary" type="submit">Crear</button>
+                </div>
+                <div>
+                    <p> MinTic 2022 </p>
+                </div>
+            </div>
+        </div>
+    </form>
+
+</main>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</body>
+</html>
