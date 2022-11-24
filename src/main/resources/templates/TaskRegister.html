@@ -35,11 +35,11 @@
                 <form style="margin-left: 25%;">
                     <b><label class="form-label">Estado</label></b>
                     <br>
-                    <input type="radio" class="btn-check" th:field="*{estado}" id="ToDo"  value="ToDo" required>
+                    <input type="radio" class="btn-check" th:field="*{profileTask}" id="ToDo"  value="ToDo" required>
                     <label class="btn btn-outline-primary" for="ToDo">Pendiente</label>
-                    <input type="radio" class="btn-check" th:field="*{estado}" id="Doing"  value="Doing" required>
+                    <input type="radio" class="btn-check" th:field="*{profileTask}" id="Doing"  value="Doing" required>
                     <label class="btn btn-outline-primary" for="Doing">En progreso</label><br>
-                    <input type="radio" class="btn-check" th:field="*{estado}" id="Done"  value="Done" required>
+                    <input type="radio" class="btn-check" th:field="*{profileTask}" id="Done"  value="Done" required>
                     <label class="btn btn-outline-primary" for="Done">Hecho</label><br>
                 </form>
 
